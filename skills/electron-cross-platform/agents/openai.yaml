@@ -1,0 +1,3 @@
+interface:
+  display_name: "Electron cross-platform releases"
+  short_description: "Adapt an Electron project for multi-OS installers"

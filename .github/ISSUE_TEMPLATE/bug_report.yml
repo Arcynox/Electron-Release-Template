@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem with the template or release pipeline
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: For security issues, use the private reporting instructions in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Template version or commit
+      placeholder: v0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and architecture
+      placeholder: Ubuntu 24.04 x64, Windows 11 ARM64, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Remove tokens, certificates and personal data before posting.
+      render: shell

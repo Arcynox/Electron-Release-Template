@@ -1,0 +1,32 @@
+appId: com.example.electronreleasetemplate
+productName: Electron Release Template
+directories:
+  output: dist
+files:
+  - src/**/*
+  - package.json
+  - LICENSE
+artifactName: ${name}-${version}-${os}-${arch}.${ext}
+win:
+  target: nsis
+mac:
+  category: public.app-category.developer-tools
+  target: dmg
+linux:
+  category: Development
+  syncDesktopName: true
+  target:
+    - AppImage
+    - deb
+    - rpm
+    - pacman
+pacman:
+  depends:
+    - gtk3
+    - libnotify
+    - nss
+    - libxss
+    - libxtst
+    - xdg-utils
+    - at-spi2-core
+    - libsecret

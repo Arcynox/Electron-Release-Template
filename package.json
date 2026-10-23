@@ -1,0 +1,31 @@
+{
+  "name": "electron-release-template",
+  "version": "0.1.0",
+  "description": "A small Electron starter with cross-platform GitHub Actions releases",
+  "desktopName": "electron-release-template",
+  "main": "src/main.cjs",
+  "author": {
+    "name": "Electron Release Template contributors",
+    "email": "maintainers@example.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/your-org/electron-release-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/electron-release-template.git"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "start": "electron .",
+    "lint": "node --check src/main.cjs && node --check scripts/release-check.mjs",
+    "test": "node --test",
+    "pack": "electron-builder --dir --publish never",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.15.3"
+  }
+}
