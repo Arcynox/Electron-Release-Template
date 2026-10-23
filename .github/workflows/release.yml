@@ -65,7 +65,7 @@ jobs:
           WIN_CSC_KEY_PASSWORD: ${{ matrix.platform == 'win' && secrets.WIN_CSC_KEY_PASSWORD || '' }}
       - name: Check installers
         run: node scripts/release-check.mjs assets dist ${{ matrix.platform }} ${{ matrix.arch }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: installers-${{ matrix.platform }}-${{ matrix.arch }}
           path: |
